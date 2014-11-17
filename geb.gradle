@@ -1,10 +1,12 @@
 apply plugin: 'base'
 apply plugin: 'idea'
 apply from: "gradle/idea.gradle"
+apply plugin: 'maven'
 
 buildscript {
 	repositories {
 		mavenCentral()
+		mavenLocal()
 	}
 }
 
@@ -22,8 +24,8 @@ if (project.hasProperty("ci")) {
 }
 
 allprojects { project ->
-	version = '0.10.1-SNAPSHOT'
-	group = 'org.gebish'
+	version = '0.0.1-SNAPSHOT'
+	group = 'com.mulesoft.automation.cloudhub.customgeb'
 	
 	ext {
 		isSnapshot = version.endsWith("-SNAPSHOT")

@@ -66,15 +66,4 @@ class GebSpec extends Specification {
 		this.class.getAnnotation(Stepwise) != null
 	}
 
-	def cleanup() {
-		if (!isSpecStepwise()) {
-			resetBrowser()
-		}
-	}
-
-	def cleanupSpec() {
-		if (isSpecStepwise()) {
-			resetBrowser()
-		}
-	}
 }
